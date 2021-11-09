@@ -1,58 +1,33 @@
 <nz-layout class="layout">
-    <nz-sider 
-      class="menu-sidebar"
-      nzCollapsible 
-      [(nzCollapsed)]="isCollapsed" 
-      [nzTrigger]="null">
-      <div class="logo"></div>
-      <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
-        <li nz-submenu nzTitle="DashBoard" nzIcon="dashboard">
-          <ul>
-            <li routerLink="/dashboard" nz-menu-item>Vendas</li>
-          </ul>
-        </li>
-        <li nz-submenu nzTitle="Cadastros" nzIcon="form">
-          <ul>
-            <li routerLink="/clientes" nz-menu-item>Clientes</li>
-            <li nz-menu-item>Fornecedores</li>
-            <li routerLink="/funcionarios" nz-menu-item>Funcionarios</li>
-            <li nz-menu-item>Transportadoras</li>
-            <li nz-menu-item>Usuários</li>
-          </ul>
-        </li>
-        <li nz-submenu nzTitle="Estoque" nzIcon="barcode">
-          <ul>
-            <li routerLink="/produtos" nz-menu-item>Gerenciar Produtos</li>
-          </ul>
-        </li>
-        <li nz-submenu nzTitle="Comercial" nzIcon="shopping-cart">
-          <ul>
-            <li routerLink="/vendas" nz-menu-item>Vendas</li>
-          </ul>
-        </li>
-        <li nz-submenu nzTitle="Financeiro" nzIcon="bank">
-          <ul>
-            <li nz-menu-item>Contas à Pagar</li>
-            <li nz-menu-item>Contas à Receber</li>
-          </ul>
-        </li>
-      </ul>
-    </nz-sider>
-    <nz-layout>
-      <nz-header>
-        <div class="app-header">
-          <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
-              <i class="trigger"
-                 nz-icon
-                 [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
-              ></i>
-          </span>
-        </div>
-      </nz-header>
-      
-      <nz-content>
-          <router-outlet></router-outlet>     
-      </nz-content>
-   
-    </nz-layout>
+  <nz-sider class="menu-sidebar" nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
+    <div class="logo"></div>
+    <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
+
+      <li routerLink="/home" nz-menu-item>
+        <i nz-icon nzType="home"></i>
+        <span>Home</span>
+      </li>
+
+      <li nz-menu-item>
+        <i nz-icon nzType="video-camera"></i>
+        <span>Filmes</span>
+      </li>
+
+    </ul>
+
+  </nz-sider>
+  <nz-layout>
+    <nz-header>
+      <div class="app-header">
+        <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
+          <i class="trigger" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"></i>
+        </span>
+      </div>
+    </nz-header>
+
+    <nz-content class="inner-content">
+      <router-outlet></router-outlet>
+    </nz-content>
+
   </nz-layout>
+</nz-layout>
