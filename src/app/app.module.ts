@@ -9,17 +9,19 @@ import pt from '@angular/common/locales/pt';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeModule } from './home/home.module';
+
 import { CompartilhadoModule } from './compartilhado/compartilhado.module';
+
 
 
 registerLocaleData(pt);
 
 @NgModule({
+  
   declarations: [
     AppComponent,
-
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
