@@ -1,0 +1,39 @@
+<div class="div-button-add">
+  <button nz-button nzType="primary">Novo Filme</button>
+</div>
+
+<nz-card nzTitle="Listagem de Filmes">
+  <nz-table [nzData]="filmes" [nzScroll]="{ x: '800px', y: '360px' }">
+    <thead>
+      <tr>
+        <th>Numero Filme</th>
+        <th>Título</th>
+        <th>Valor</th>
+        <th>Data Cadastro</th>
+        <th>Açoes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let filme of filmes">
+        <td>{{filme.id_filme}}</td>
+        <td>{{filme.titulo}}</td>
+        <td>{{filme.valor_locacao | currency}}</td>
+        <td>{{filme.data_cadastro | formatDate}}</td>
+        <td>
+
+          <button nz-button class="botao-editar" nzType="default" nzShape="circle"
+            (click)="editar.emit(filme.id_filme)">
+            <i nz-icon nzType="search"></i>
+          </button>
+
+          <button nz-button class="botao-deletar" nzType="default" nzShape="circle"
+            (click)="remover.emit(filme.id_filme)">
+            <i nz-icon nzType="delete"></i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </nz-table>
+
+
+</nz-card>
