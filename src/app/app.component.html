@@ -1,6 +1,6 @@
 <nz-layout class="layout">
   <nz-sider class="menu-sidebar" nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
-    <div class="logo"></div>
+    <img class="logo-navbar" src="../assets/logo-blockbuster.png">
     <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
 
       <li routerLink="/home" nz-menu-item>
@@ -8,7 +8,7 @@
         <span>Home</span>
       </li>
 
-      <li nz-menu-item>
+      <li routerLink="/filmes" nz-menu-item>
         <i nz-icon nzType="video-camera"></i>
         <span>Filmes</span>
       </li>
