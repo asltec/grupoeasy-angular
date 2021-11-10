@@ -11,6 +11,8 @@ export class FilmesListComponent implements OnInit {
   @Input() filmes: Filmes[] = [];
   @Output() editar = new EventEmitter<any>();
   @Output() remover = new EventEmitter<any>();
+  @Output() adicionar = new EventEmitter<any>();
+
   constructor() { }
 
   ngOnInit(): void {
