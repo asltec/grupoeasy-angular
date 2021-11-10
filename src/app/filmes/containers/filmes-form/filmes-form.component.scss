@@ -1,0 +1,22 @@
+.data{
+    width: 100%;
+}
+
+.botao-salvar{
+    margin-left: 12px;
+    background: #28a745;
+    border: 1px solid #28a745;
+    color: white;
+}
+
+.botao-voltar{
+    background: #dc3545;
+    border: 1px solid #dc3545;
+    color: white;
+}
+
+.div-botoes{
+    display: flex;
+    justify-content: flex-end;
+}
+

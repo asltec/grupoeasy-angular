@@ -1,0 +1,140 @@
+<nz-card [nzTitle]="id ? 'Editar Cliente' : 'Cadastro de Cliente'">
+
+    <form nz-form [formGroup]="filmeForm" (ngSubmit)="submit()">
+        <div nz-row [nzGutter]="16">
+
+            <div nz-col nzSpan="6">
+                <nz-form-label nzRequired nzFor="nome">Número do Filme</nz-form-label>
+                <nz-form-item>
+                    <nz-form-control [nzValidateStatus]="filmeForm.controls['id_filme']"
+                        nzErrorTip="Campo Numero do Filme é Obrigatório!">
+                        <input nz-input name="id_filme" type="text" id="id_filme" formControlName="id_filme">
+                    </nz-form-control>
+                </nz-form-item>
+            </div>
+
+            <div nz-col nzSpan="6">
+                <nz-form-label nzRequired nzFor="tipo_produto">Tipo Produto</nz-form-label>
+                <nz-form-item>
+                    <nz-form-control [nzValidateStatus]="filmeForm.controls['tipo_produto']"
+                        nzErrorTip="Campo Tipo Produto é Obrigatório!">
+                        <nz-select nzPlaceHolder="Selecione um Tipo Produto" formControlName="tipo_produto">
+                            <nz-option nzLabel="VHS" nzValue="VHS"></nz-option>
+                            <nz-option nzLabel="DVD" nzValue="DVD"></nz-option>
+                        </nz-select>
+                    </nz-form-control>
+                </nz-form-item>
+            </div>
+
+            <div nz-col nzSpan="6">
+                <nz-form-label nzRequired nzFor="tipo">Tipo Filme</nz-form-label>
+                <nz-form-item>
+                    <nz-form-control [nzValidateStatus]="filmeForm.controls['tipo_filme']"
+                        nzErrorTip="Campo Tipo Filme é Obrigatório!">
+                        <nz-select nzPlaceHolder="Selecione um Tipo Filme" formControlName="tipo_filme">
+                            <nz-option nzLabel="24 HORAS" nzValue="24 HORAS"></nz-option>
+                        </nz-select>
+                    </nz-form-control>
+                </nz-form-item>
+            </div>
+
+            <div nz-col nzSpan="6">
+                <nz-form-label nzRequired nzFor="genero">Gênero</nz-form-label>
+                <nz-form-item>
+                    <nz-form-control [nzValidateStatus]="filmeForm.controls['genero']"
+                        nzErrorTip="Campo Gênero é Obrigatório!">
+                        <nz-select nzPlaceHolder="Selecione um Gênero" formControlName="genero">
+                            <nz-option nzLabel="AÇÂO" nzValue="AÇÂO"></nz-option>
+                            <nz-option nzLabel="AVENTURA" nzValue="AVENTURA"></nz-option>
+                            <nz-option nzLabel="SUSPENSE" nzValue="SUSPENSE"></nz-option>
+                            <nz-option nzLabel="TERROR" nzValue="TERROR"></nz-option>
+                            <nz-option nzLabel="COMÉDIA" nzValue="COMÉDIA"></nz-option>
+                        </nz-select>
+                    </nz-form-control>
+                </nz-form-item>
+            </div>
+
+            <div nz-col nzSpan="6">
+                <nz-form-label nzRequired nzFor="titulo">Título</nz-form-label>
+                <nz-form-item>
+                    <nz-form-control [nzValidateStatus]="filmeForm.controls['titulo']"
+                        nzErrorTip="Campo Título do Filme é Obrigatório!">
+                        <input nz-input name="titulo" type="text" id="titulo" formControlName="titulo">
+                    </nz-form-control>
+                </nz-form-item>
+            </div>
+
+
+            <div nz-col nzSpan="6">
+                <nz-form-label  nzFor="atores">Atores</nz-form-label>
+                <nz-form-item>
+                    <nz-form-control>
+                        <input nz-input name="atores" type="text" id="atores" formControlName="atores">
+                    </nz-form-control>
+                </nz-form-item>
+            </div>
+
+            <div nz-col nzSpan="6">
+                <nz-form-label  nzFor="diretores">Diretores</nz-form-label>
+                <nz-form-item>
+                    <nz-form-control>
+                        <input nz-input name="diretores" type="text" id="diretores" formControlName="diretores">
+                    </nz-form-control>
+                </nz-form-item>
+            </div>
+
+            <div nz-col nzSpan="6">
+                <nz-form-label  nzFor="fornecedor">Fornecedor</nz-form-label>
+                <nz-form-item>
+                    <nz-form-control>
+                        <input nz-input name="fornecedor" type="text" id="fornecedor" formControlName="fornecedor">
+                    </nz-form-control>
+                </nz-form-item>
+            </div>
+
+            <div nz-col nzSpan="8">
+                <nz-form-label  nzFor="idioma">Idíoma</nz-form-label>
+                <nz-form-item>
+                    <nz-form-control>
+                        <input nz-input name="idioma" type="text" id="idioma" formControlName="idioma">
+                    </nz-form-control>
+                </nz-form-item>
+            </div>
+
+            <div nz-col nzSpan="8">
+                <nz-form-label nzRequired nzFor="valor_locacao">Valor Locação</nz-form-label>
+                <nz-form-item>
+                    <nz-form-control [nzValidateStatus]="filmeForm.controls['valor_locacao']"
+                        nzErrorTip="Campo Valor Locação é Obrigatório!">
+                        <input nz-input name="valor_locacao" type="text" id="valor_locacao"
+                            formControlName="valor_locacao">
+                    </nz-form-control>
+                </nz-form-item>
+            </div>
+
+            <div nz-col nzSpan="8">
+                <nz-form-label  nzFor="data_cadastro">Data Cadastro</nz-form-label>
+                <nz-form-item>
+                    <nz-form-control>
+                        <nz-date-picker class="data" formControlName="data_cadastro" [nzFormat]="dateFormat"></nz-date-picker>
+
+                    </nz-form-control>
+                </nz-form-item>
+            </div>
+
+        </div>
+
+        <div class="div-botoes">
+            <button nz-button type="button" class="botao-voltar" (click)="voltarListagem()">
+                <i nz-icon nzType="close"></i>
+                Cancelar
+            </button>
+
+            <button nz-button nzType="default" type="submit" class="botao-salvar">
+                <i nz-icon nzType="save"></i>
+                Gravar
+            </button>
+        </div>
+    </form>
+
+</nz-card>

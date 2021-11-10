@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { filmes } from '../../models/filmes';
 
 
@@ -11,9 +12,13 @@ export class FilmesListagemComponent implements OnInit {
 
   public filmes = filmes;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
+
+  public async acessarRotaCadastro() {
+    this.router.navigate([`filmes/cadastro`]);
+}
 
 }

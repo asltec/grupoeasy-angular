@@ -5,11 +5,13 @@ import { CompartilhadoModule } from "../compartilhado/compartilhado.module";
 import { FilmesListComponent } from "./components/filmes-list/filmes-list.component";
 import { FilmesListagemComponent } from "./containers/filmes-listagem/filmes-listagem.component";
 import { FilmesRoutingModule } from "./filmes-routing.module";
+import { FilmesFormComponent } from './containers/filmes-form/filmes-form.component';
 
 @NgModule({
     declarations: [
         FilmesListComponent,
-        FilmesListagemComponent
+        FilmesListagemComponent,
+        FilmesFormComponent
     ],
 
     imports: [
