@@ -67,8 +67,12 @@ import { NzTypographyModule } from 'ng-zorro-antd/typography';
 import { NzUploadModule } from 'ng-zorro-antd/upload';
 import { NzResizableModule } from 'ng-zorro-antd/resizable';
 import { NzPipesModule } from 'ng-zorro-antd/pipes';
+import { MomentPipe } from "./moment-pipe";
 
 @NgModule({
+    declarations: [
+        MomentPipe
+    ],
     imports: [
         NzButtonModule, 
         NzIconModule,
@@ -236,6 +240,7 @@ import { NzPipesModule } from 'ng-zorro-antd/pipes';
         NzWaveModule,
         NzResizableModule,
         NzPipesModule,
+        MomentPipe
     ]
 })
 export class CompartilhadoModule{
