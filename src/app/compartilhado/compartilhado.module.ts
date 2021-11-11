@@ -68,6 +68,7 @@ import { NzUploadModule } from 'ng-zorro-antd/upload';
 import { NzResizableModule } from 'ng-zorro-antd/resizable';
 import { NzPipesModule } from 'ng-zorro-antd/pipes';
 import { MomentPipe } from "./moment-pipe";
+import { CurrencyMaskModule } from "ng2-currency-mask";
 
 @NgModule({
     declarations: [
@@ -240,7 +241,8 @@ import { MomentPipe } from "./moment-pipe";
         NzWaveModule,
         NzResizableModule,
         NzPipesModule,
-        MomentPipe
+        MomentPipe,
+        CurrencyMaskModule
     ]
 })
 export class CompartilhadoModule{
