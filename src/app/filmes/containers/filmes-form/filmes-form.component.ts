@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Filmes } from '../../models/filmes';
 
 @Component({
   selector: 'app-filmes-form',
@@ -12,6 +13,7 @@ export class FilmesFormComponent implements OnInit {
   public filmeForm: FormGroup;
   public dateFormat = 'dd/MM/yyyy';
   public id: number;
+  public filmes: Filmes[];
 
   constructor(private fb: FormBuilder,
     private router: Router) { }
@@ -39,7 +41,8 @@ export class FilmesFormComponent implements OnInit {
   }
 
   submit(){
-
+    this.filmes.push(this.filmeForm.value);
+    console.log(this.filmes);
   }
 
   public voltarListagem() {

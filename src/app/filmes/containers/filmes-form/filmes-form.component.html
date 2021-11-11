@@ -106,8 +106,13 @@
                 <nz-form-item>
                     <nz-form-control [nzValidateStatus]="filmeForm.controls['valor_locacao']"
                         nzErrorTip="Campo Valor Locação é Obrigatório!">
-                        <input nz-input name="valor_locacao" type="text" id="valor_locacao"
-                            formControlName="valor_locacao">
+                        <input 
+                            nz-input 
+                            name="valor_locacao" 
+                            type="text" 
+                            id="valor_locacao"
+                            formControlName="valor_locacao"
+                            currencyMask [options]="{prefix: '', thousands: '.', decimal: ',', allowNegative: false}" >
                     </nz-form-control>
                 </nz-form-item>
             </div>
