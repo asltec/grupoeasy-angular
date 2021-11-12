@@ -6,12 +6,14 @@ import { FilmesListComponent } from "./components/filmes-list/filmes-list.compon
 import { FilmesListagemComponent } from "./containers/filmes-listagem/filmes-listagem.component";
 import { FilmesRoutingModule } from "./filmes-routing.module";
 import { FilmesFormComponent } from './containers/filmes-form/filmes-form.component';
+import { GridComponent } from './components/grid/grid.component';
 
 @NgModule({
     declarations: [
         FilmesListComponent,
         FilmesListagemComponent,
-        FilmesFormComponent
+        FilmesFormComponent,
+        GridComponent
     ],
 
     imports: [
