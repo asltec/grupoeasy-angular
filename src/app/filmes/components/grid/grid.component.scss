@@ -1,0 +1,54 @@
+.div-main {
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    margin: 40px;
+}
+
+.content {
+    grid-area: content;
+}
+
+.header {
+    grid-area: header;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 20px;
+    grid-column-gap: 200px;
+    grid-template-columns: 120px 120px 120px;
+    grid-template-rows: 120px 120px 120px;
+    grid-template-areas:
+        "....... header  header"
+        "sidebar content content";
+    background-color: #fff;
+    color: #444;
+}
+.box {
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+}
+
+.header {
+    background: linear-gradient(to right, blue, pink);
+}
+
+.sidebar {
+    background-color: rgb(28, 47, 224);
+    height: 264px;
+    width: 305px;
+}
+
+.content {
+    background-image: url("../../../../assets/céu.jfif");
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
